@@ -1,0 +1,45 @@
+.holo-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.holo-card__glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(168, 85, 247, 0.12) 35%,
+    rgba(99, 102, 241, 0.08) 60%,
+    transparent 80%
+  );
+  mix-blend-mode: overlay;
+  opacity: var(--glare-opacity, 0);
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.holo-card__holo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 0, 150, 0.1) 25%,
+    rgba(0, 255, 255, 0.12) 45%,
+    rgba(255, 255, 0, 0.1) 65%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  background-position: var(--holo-pos-x, 50%) var(--holo-pos-y, 50%);
+  mix-blend-mode: color-dodge;
+  opacity: var(--holo-opacity, 0);
+  transition: opacity 0.3s ease;
+  z-index: 21;
+}

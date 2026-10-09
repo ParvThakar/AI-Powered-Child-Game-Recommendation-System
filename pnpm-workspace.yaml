@@ -1,0 +1,5 @@
+allowBuilds:
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - lucide-react@1.53.0
+  - openai@7.31.0

@@ -131,25 +131,6 @@ npm start
 | `/api/location` | `GET` | Detected IP country and manual confirmation flag |
 | `/api/recommendations` | `POST` | Primary recommendation engine with safety checks |
 
-### Example Request (`POST /api/recommendations`):
-```json
-{
-  "age": 8,
-  "category": "educational",
-  "countryCode": "US"
-}
-```
-
----
-
-## ☁️ Deploying to Vercel
-
-1. Push your repository to GitHub or GitLab.
-2. Import the project into [Vercel](https://vercel.com/new).
-3. (Optional) Add your `OPENAI_API_KEY` under **Environment Variables**.
-4. Click **Deploy**. Next.js App Router and all server route handlers will be deployed seamlessly on Vercel's Edge/Serverless infrastructure.
-
----
 
 ## ⚖️ Safety & Disclaimer
 
